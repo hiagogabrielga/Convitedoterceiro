@@ -258,6 +258,11 @@
   opacity: 0.8;
 }
 
+
+.infinito{
+  font-size: 26px;
+}
+
 /* ANIMAÇÕES */
 @keyframes fadeIn {
   from { opacity: 0; }

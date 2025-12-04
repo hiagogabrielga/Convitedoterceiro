@@ -1,13 +1,14 @@
 "use client";
 import styles from "./page.module.css";
 import { useState } from "react";
+import { Infinity, Equal, Plus, MoveRight } from "lucide-react";
+import ModalConvite from "@/components/ModalConvite";
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false);
   return (
     <main className={styles.container}>
 
-      {/* Ícones decorativos */}
       <div className={`${styles.icon} ${styles.iconAtom}`}>⚛️</div>
       <div className={`${styles.icon} ${styles.iconTube}`}>🧪</div>
       <div className={`${styles.icon} ${styles.iconCoat}`}>🥼</div>
@@ -22,8 +23,8 @@ export default function Home() {
         </p>
 
         <h2 className={styles.formula}>
-          Alunos <span className={styles.symbol}> + </span> Professor
-          <span className={styles.symbol}> → </span> Inesquecível
+          Alunos <span className={styles.symbol}> <Plus /> </span> Professor
+          <span className={styles.symbol}> <MoveRight /> </span> Inesquecível
         </h2>
       </div>
 
@@ -46,7 +47,7 @@ export default function Home() {
             <p className={styles.cardText}>
               Você nos ensinou a enxergar o mundo através das lentes da ciência
             </p>
-            <div className={styles.tag}>H₂O → Vida</div>
+            <div className={styles.tag}>H₂O <MoveRight /> Vida</div>
           </div>
         </div>
 
@@ -58,7 +59,7 @@ export default function Home() {
             <p className={styles.cardText}>
               Cada aula foi uma experiência única de aprendizado e descoberta
             </p>
-            <div className={styles.tag}>C₆H₁₂O₆ → Energia</div>
+            <div className={styles.tag}>C₆H₁₂O₆ <MoveRight /> Energia</div>
           </div>
         </div>
 
@@ -70,7 +71,7 @@ export default function Home() {
             <p className={styles.cardText}>
               Sua paixão pela química contagiou todos nós
             </p>
-            <div className={styles.tag}>Fe + Você → Determinação</div>
+            <div className={styles.tag}>Fe + Você <MoveRight /> Determinação</div>
           </div>
         </div>
 
@@ -82,13 +83,13 @@ export default function Home() {
             <p className={styles.cardText}>
               Catalisou nossa transformação de alunos para profissionais
             </p>
-            <div className={styles.tag}>Nós + Você → Futuro</div>
+            <div className={styles.tag}>Nós + Você <MoveRight /> Futuro</div>
           </div>
         </div>
 
       </div>
 
-      <div className={styles.footerTag}>pH da Gratidão = ∞</div>
+      <button className={styles.footerTag}>pH da Gratidão <Equal /> <Infinity size={20}/></button>
 
 
       {/* Título acima do botão */}
@@ -105,25 +106,8 @@ export default function Home() {
 
       {/* MODAL */}
       {openModal && (
-        <div className={styles.modalOverlay} onClick={() => setOpenModal(false)}>
-          <div
-            className={styles.modalContent}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 className={styles.modalTitle}>💌 Convite Especial</h3>
 
-            <p className={styles.modalText}>
-              Prepare-se... algo muito especial está prestes a acontecer!
-            </p>
-
-            <button
-              className={styles.closeButton}
-              onClick={() => setOpenModal(false)}
-            >
-              Fechar
-            </button>
-          </div>
-        </div>
+        <ModalConvite open={true}/>
       )}
 
     </main>
