@@ -1,66 +1,131 @@
-import Image from "next/image";
+"use client";
 import styles from "./page.module.css";
+import { useState } from "react";
 
 export default function Home() {
+  const [openModal, setOpenModal] = useState(false);
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className={styles.container}>
+
+      {/* Ícones decorativos */}
+      <div className={`${styles.icon} ${styles.iconAtom}`}>⚛️</div>
+      <div className={`${styles.icon} ${styles.iconTube}`}>🧪</div>
+      <div className={`${styles.icon} ${styles.iconCoat}`}>🥼</div>
+
+      <h1 className={styles.title}>
+        Uma Reação Especial <span className={styles.emoji}>🧪</span>
+      </h1>
+
+      <div className={styles.box}>
+        <p className={styles.subtitle}>
+          Quando elementos especiais se combinam...
+        </p>
+
+        <h2 className={styles.formula}>
+          Alunos <span className={styles.symbol}> + </span> Professor
+          <span className={styles.symbol}> → </span> Inesquecível
+        </h2>
+      </div>
+
+      <p className={styles.text}>
+        Algumas reações químicas resultam em compostos estáveis e preciosos.
+        A sua influência em nossas vidas criou uma ligação que queremos preservar
+        para sempre.
+      </p>
+
+      {/* NOVA SEÇÃO — A Fórmula do Professor Perfeito */}
+      <h2 className={styles.sectionTitle}>A Fórmula do Professor Perfeito</h2>
+
+      <div className={styles.cardGrid}>
+
+        {/* Conhecimento */}
+        <div className={styles.card}>
+          <div className={styles.cardIcon}>🔬</div>
+          <div>
+            <h3 className={styles.cardTitle}>Conhecimento</h3>
+            <p className={styles.cardText}>
+              Você nos ensinou a enxergar o mundo através das lentes da ciência
+            </p>
+            <div className={styles.tag}>H₂O → Vida</div>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Dedicação */}
+        <div className={styles.card}>
+          <div className={styles.cardIcon}>🎓</div>
+          <div>
+            <h3 className={styles.cardTitle}>Dedicação</h3>
+            <p className={styles.cardText}>
+              Cada aula foi uma experiência única de aprendizado e descoberta
+            </p>
+            <div className={styles.tag}>C₆H₁₂O₆ → Energia</div>
+          </div>
         </div>
-      </main>
-    </div>
+
+        {/* Inspiração */}
+        <div className={styles.card}>
+          <div className={styles.cardIcon}>💚</div>
+          <div>
+            <h3 className={styles.cardTitle}>Inspiração</h3>
+            <p className={styles.cardText}>
+              Sua paixão pela química contagiou todos nós
+            </p>
+            <div className={styles.tag}>Fe + Você → Determinação</div>
+          </div>
+        </div>
+
+        {/* Transformação */}
+        <div className={styles.card}>
+          <div className={styles.cardIcon}>⚗️</div>
+          <div>
+            <h3 className={styles.cardTitle}>Transformação</h3>
+            <p className={styles.cardText}>
+              Catalisou nossa transformação de alunos para profissionais
+            </p>
+            <div className={styles.tag}>Nós + Você → Futuro</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div className={styles.footerTag}>pH da Gratidão = ∞</div>
+
+
+      {/* Título acima do botão */}
+      <h2 className={styles.questionText}>
+        E agora, chegou o momento da pergunta mais importante...
+      </h2>
+
+      {/* Botão que abre o modal */}
+      <button className={styles.inviteButton} onClick={() => setOpenModal(true)}>
+        <span className={styles.iconMail}>✉️</span>
+        Abrir Convite Especial
+        <span className={styles.iconSpark}>✨</span>
+      </button>
+
+      {/* MODAL */}
+      {openModal && (
+        <div className={styles.modalOverlay} onClick={() => setOpenModal(false)}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className={styles.modalTitle}>💌 Convite Especial</h3>
+
+            <p className={styles.modalText}>
+              Prepare-se... algo muito especial está prestes a acontecer!
+            </p>
+
+            <button
+              className={styles.closeButton}
+              onClick={() => setOpenModal(false)}
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      )}
+
+    </main>
   );
 }
