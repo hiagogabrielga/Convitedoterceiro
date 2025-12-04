@@ -1,17 +1,28 @@
 "use client";
 import styles from "./page.module.css";
 import { useState } from "react";
+<<<<<<< HEAD
 import { Infinity, Equal, Plus, MoveRight } from "lucide-react";
 import ModalConvite from "@/components/ModalConvite";
+=======
+import { Atom, FlaskConical, Beaker, Microscope, Heart, Sparkles, GraduationCap, Mail } from 'lucide-react';
+>>>>>>> 011b0138cc109885996446b6015e9024fcb05d6e
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false);
   return (
     <main className={styles.container}>
 
+<<<<<<< HEAD
       <div className={`${styles.icon} ${styles.iconAtom}`}>⚛️</div>
       <div className={`${styles.icon} ${styles.iconTube}`}>🧪</div>
       <div className={`${styles.icon} ${styles.iconCoat}`}>🥼</div>
+=======
+      {/* Ícones decorativos */}
+      <div className={`${styles.icon} ${styles.iconAtom}`}><Atom /></div>
+      <div className={`${styles.icon} ${styles.iconTube}`}><Beaker /></div>
+      <div className={`${styles.icon} ${styles.iconCoat}`}><FlaskConical /></div>
+>>>>>>> 011b0138cc109885996446b6015e9024fcb05d6e
 
       <h1 className={styles.title}>
         Uma Reação Especial <span className={styles.emoji}>🧪</span>
@@ -41,7 +52,7 @@ export default function Home() {
 
         {/* Conhecimento */}
         <div className={styles.card}>
-          <div className={styles.cardIcon}>🔬</div>
+          <div className={styles.cardIcon}><Microscope /></div>
           <div>
             <h3 className={styles.cardTitle}>Conhecimento</h3>
             <p className={styles.cardText}>
@@ -53,7 +64,7 @@ export default function Home() {
 
         {/* Dedicação */}
         <div className={styles.card}>
-          <div className={styles.cardIcon}>🎓</div>
+          <div className={styles.cardIcon}><GraduationCap /></div>
           <div>
             <h3 className={styles.cardTitle}>Dedicação</h3>
             <p className={styles.cardText}>
@@ -65,7 +76,7 @@ export default function Home() {
 
         {/* Inspiração */}
         <div className={styles.card}>
-          <div className={styles.cardIcon}>💚</div>
+          <div className={styles.cardIcon}><Heart /></div>
           <div>
             <h3 className={styles.cardTitle}>Inspiração</h3>
             <p className={styles.cardText}>
@@ -77,7 +88,7 @@ export default function Home() {
 
         {/* Transformação */}
         <div className={styles.card}>
-          <div className={styles.cardIcon}>⚗️</div>
+          <div className={styles.cardIcon}><Sparkles /></div>
           <div>
             <h3 className={styles.cardTitle}>Transformação</h3>
             <p className={styles.cardText}>
@@ -99,9 +110,9 @@ export default function Home() {
 
       {/* Botão que abre o modal */}
       <button className={styles.inviteButton} onClick={() => setOpenModal(true)}>
-        <span className={styles.iconMail}>✉️</span>
+        <span className={styles.iconMail}><Mail /></span>
         Abrir Convite Especial
-        <span className={styles.iconSpark}>✨</span>
+        <span className={styles.iconSpark}><Sparkles /></span>
       </button>
 
       {/* MODAL */}
