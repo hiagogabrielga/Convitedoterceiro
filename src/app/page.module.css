@@ -1,10 +1,10 @@
-.main {
+.padding {
   justify-content: center;
   align-items: center;
   margin: auto;
   display: flex;
   flex-direction: column;
-  padding: 5% 20%;
+  padding: 5% 20% 0%;
 }
 
 .decoracaoRotativa {
@@ -12,6 +12,7 @@
   position: absolute;
   color: var(--color-font);
   animation: girar 15s linear infinite; /* ⬅ animação girando */
+  z-index: -1;
 }
 
 .decoracaoLevitando {
@@ -19,6 +20,7 @@
   position: absolute;
   color: var(--color-font);
   animation: levitar 3.5s ease-in-out infinite;
+  z-index: -1;
 }
 
 @keyframes levitar {
@@ -38,6 +40,7 @@
   color: var(--color-font);
   position: absolute;
   animation: pulsar 2s ease-in-out infinite;
+  z-index: -1;
 }
 
 @keyframes pulsar {
@@ -242,6 +245,7 @@
 .tituloConvite {
   color: var(--color-font);
   font-size: 20px;
+  text-align: center;
 }
 
 .botaoConvite {
@@ -274,7 +278,7 @@
 }
 
 @media (max-width: 1000px) {
-  .main {
+  .padding{
     padding: 5% 10%;
   }
 }
@@ -286,13 +290,13 @@
 }
 
 @media (max-width: 600px) {
-  .main {
+  .padding{
     padding: 5% 5%;
   }
 }
 
 @media (max-width: 500px) {
-  .main {
+  .padding{
     padding: 20px 10px;
   }
 
@@ -334,6 +338,8 @@
     flex-direction: column;
     padding: 20px;
     gap: 15px;
+    align-items: center;
+    justify-content: center;
   }
 
   .containerIcon {
@@ -359,8 +365,9 @@
 
   /* Equação fica abaixo e centralizada */
   .containerEquacao {
-    position: static;
+    position: relative;
     margin-top: 10px;
+    margin: 20px auto 5px;
   }
 
   .equacaoCard {
@@ -372,7 +379,6 @@
     width: 180px;
     height: 40px;
     font-size: 15px;
-
   }
 
   .botaoConvite {
@@ -432,15 +438,10 @@
   }
 }
 
-
-
-
-
-
-.turma{
+.turma {
   font-size: 28px;
+  margin-left: 10px;
 }
-
 
 /* ============================================
    CARD — mesmo estilo dos seus .card principais
@@ -456,24 +457,18 @@
   flex-direction: column;
   align-items: center;
   margin-right: 30px;
-
-  
 }
 
 .teamCard:hover {
-  
   box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 40px 0px;
 }
-
 
 /* ============================================
    CARD EM DESTAQUE (featured)
    ============================================ */
 .teamCardFeatured {
   border: 2px solid var(--color-font-span);
-  
 }
-
 
 /* ============================================
    AVATAR (seguindo estética circular dos ícones)
@@ -488,9 +483,6 @@
   object-position: center !important;
 }
 
-
-
-
 /* ============================================
    NOME
    ============================================ */
@@ -501,13 +493,6 @@
   color: var(--color-font-span);
   text-align: center;
 }
-
-
-
-
-
-
-
 
 /* ============================================
    UNDERLINE SUTIL — inspirado no estilo
@@ -520,11 +505,8 @@
   margin-top: 10px;
   opacity: 0;
   transform: scaleX(0.5);
-  transition: opacity .3s ease, transform .4s ease;
+  transition: opacity 0.3s ease, transform 0.4s ease;
 }
-
-
-
 
 /* ============================================
    LOOP ROW

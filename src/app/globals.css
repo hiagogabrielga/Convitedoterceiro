@@ -121,5 +121,19 @@ body {
   --color-font-component: #FFFFFF;
 
   --shadow-card: rgba(0, 0, 0, 0.10);
+  --modal-width: 45%;
 }
 
+/* Telas menores que 900px */
+@media (max-width: 1500px) {
+  :root {
+    --modal-width: 80%;
+  }
+}
+
+/* Telas menores que 600px */
+@media (max-width: 800px) {
+  :root {
+    --modal-width: 95%;
+  }
+}

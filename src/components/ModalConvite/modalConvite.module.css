@@ -141,7 +141,7 @@
 /*         CARD          */
 /* ===================== */
 .card {
-  width: 90%;
+  width: 95%;
   height: clamp(180px, 35vw, 260px);
   border-radius: 15px;
   display: flex;
