@@ -51,7 +51,7 @@ export default function Home() {
       id: 1,
       name: "Anne Gabriele Salvador Bassi",
       avatar:
-        "https://suap.ifro.edu.br/media/alunos/150x200/96105.Snt2lsQEhZPM.jpg",
+        "/img/Anne3A.jpg",
       featured: true,
     },
     {
