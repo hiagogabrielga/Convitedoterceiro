@@ -1,0 +1,356 @@
+
+.main {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 20%;
+}
+
+.titulo {
+  color: var(--color-font-span);
+  font-size: 30pt;
+  font-weight: bolder;
+}
+
+.cardInesquecivel {
+  width: 55%;
+  background-color: var(--background-card);
+  height: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25%;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-card) 0px 7px 29px 0px;
+}
+
+.textoCard {
+  font-size: 16pt;
+  color: var(--color-font);
+}
+
+.equacao {
+  font-size: 14pt;
+  color: var(--color-font);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.resultadoInesquecivel {
+  color: var(--color-font-span);
+  font-weight: bolder;
+}
+
+.textoSolto {
+  font-size: 16pt;
+  color: var(--color-font);
+  width: 60%;
+  text-align: center;
+}
+
+.formularProfessor {
+  margin-top: 5%;
+}
+
+.subTitulo {
+  font-size: 24pt;
+  color: var(--color-font-span);
+  font-weight: bolder;
+  text-align: center;
+}
+
+.containerCards {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  min-width: 300px;
+  max-width: 60%;
+  background-color: var(--background-card);
+  height: 200px;
+  box-shadow: var(--shadow-card) 0px 7px 29px 0px;
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 1.35s ease, box-shadow 0.35s ease;
+  transform-origin: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 40px 0px;
+}
+
+.containerIcon {
+  background-color: var(--background-icon);
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerConteudo {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  position: relative;
+}
+
+.icon {
+  color: var(--color-font-component);
+}
+
+.conteudo {
+  height: 100%;
+  position: relative;
+}
+
+.tituloCard {
+  font-size: 24px;
+  color: var(--color-font-span);
+}
+
+.paragrafoCard {
+  font-size: 16px;
+  margin-top: 20px;
+  color: var(--color-font);
+}
+
+.containerEquacao {
+  background-color: var(--background-body);
+  width: fit-content;
+  right: 0;
+  display: flex;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--color-font);
+  border: 2px solid;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.equacaoCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  flex-direction: row;
+}
+
+.containerBotaoZoeira{
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.botaoZoeria {
+  height: 40px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+
+background-image: linear-gradient(
+  to left,
+  var(--background-bottom),
+  var(--background-bottom-light)
+);
+  color: var(--color-font-component);
+  border: none;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 40px 0px;
+}
+
+
+.tituloConvite{
+    color: var(--color-font);
+    font-size: 20px;
+}
+
+.botaoConvite {
+  height: 60px;
+  width: 260px;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+
+background-image: linear-gradient(
+  to left,
+  var(--background-bottom),
+  var(--background-bottom-light)
+);
+  color: var(--color-font-component);
+  border: none;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 40px 0px;
+  margin: 80px auto;
+}
+
+@media (max-width: 500px) {
+
+  .main {
+    padding: 20px 10px;
+  }
+
+  .titulo {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .textoSolto {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .cardInesquecivel {
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .textoCard {
+    font-size: 15px;
+  }
+
+  .equacao {
+    font-size: 14px;
+  }
+
+  /* Container vira coluna */
+  .containerCards {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Card vira coluna */
+  .card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .containerIcon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .containerConteudo {
+    width: 100%;
+    position: static;
+  }
+
+  .tituloCard {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .paragrafoCard {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Equação fica abaixo e centralizada */
+  .containerEquacao {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .equacaoCard {
+    font-size: 14px;
+  }
+
+  /* Botões */
+  .botaoZoeria {
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .botaoConvite {
+    width: 230px;
+    height: 55px;
+    font-size: 15px;
+    margin: 50px auto;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .titulo {
+    font-size: 22px;
+  }
+
+  .subTitulo {
+    font-size: 18px;
+  }
+
+  .textoSolto {
+    font-size: 13px;
+  }
+
+  .cardInesquecivel {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .textoCard {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .tituloCard {
+    font-size: 18px;
+  }
+
+  .paragrafoCard {
+    font-size: 13px;
+  }
+
+  .equacaoCard {
+    font-size: 13px;
+  }
+
+  .botaoZoeria {
+    width: 160px;
+    font-size: 14px;
+  }
+
+  .botaoConvite {
+    width: 200px;
+    font-size: 14px;
+  }
+}
