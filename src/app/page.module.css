@@ -237,6 +237,7 @@
   border: none;
   font-size: 16px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 40px 0px;
+  margin-bottom: 50px;
 }
 
 .tituloConvite {
@@ -372,6 +373,7 @@
     width: 180px;
     height: 40px;
     font-size: 15px;
+
   }
 
   .botaoConvite {
@@ -429,4 +431,107 @@
     width: 200px;
     font-size: 14px;
   }
+}
+
+
+
+
+
+
+.turma{
+  font-size: 28px;
+}
+
+
+/* ============================================
+   CARD — mesmo estilo dos seus .card principais
+   ============================================ */
+.teamCard {
+  width: 260px;
+  height: 300px;
+  background-color: var(--background-card);
+  border-radius: 15px;
+  box-shadow: var(--shadow-card) 0px 7px 29px 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+
+  
+}
+
+.teamCard:hover {
+  
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 40px 0px;
+}
+
+
+/* ============================================
+   CARD EM DESTAQUE (featured)
+   ============================================ */
+.teamCardFeatured {
+  border: 2px solid var(--color-font-span);
+  
+}
+
+
+/* ============================================
+   AVATAR (seguindo estética circular dos ícones)
+   ============================================ */
+/* Deixa as imagens do LogoLoop redondas como perfil */
+.teamAvatar img {
+  margin-top: 25px;
+  width: 160px !important;
+  height: 160px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+
+
+
+/* ============================================
+   NOME
+   ============================================ */
+.teamName {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: var(--color-font-span);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   UNDERLINE SUTIL — inspirado no estilo
+   ============================================ */
+.teamUnderline {
+  width: 60%;
+  height: 4px;
+  background-color: var(--color-font-span);
+  border-radius: 4px;
+  margin-top: 10px;
+  opacity: 0;
+  transform: scaleX(0.5);
+  transition: opacity .3s ease, transform .4s ease;
+}
+
+
+
+
+/* ============================================
+   LOOP ROW
+   ============================================ */
+.loopRow {
+  width: 100%;
+  overflow: hidden;
+  margin: 50px 0;
 }
