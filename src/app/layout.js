@@ -9,8 +9,8 @@ const poppins = Poppins({
 
 
 export const metadata = {
-  title: "Convite",
-  description: "Convite dos terceirões de informática",
+  title: "Portifólio",
+  description: "Portifólio dos terceirões de informática",
 };
 
 export default function RootLayout({ children }) {

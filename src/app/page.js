@@ -70,7 +70,7 @@ export default function Home() {
       id: 1,
       name: "Carlos Eduardo Gomes de Oliveira",
       avatar:
-        "https://suap.ifro.edu.br/media/alunos/150x200/96143.uvSEro0AucQ7.jpg",
+        "/img/Carlos3A.jpg",
       featured: true,
     },
     {
@@ -97,7 +97,7 @@ export default function Home() {
       id: 1,
       name: "João Gabriel Corso",
       avatar:
-        "https://suap.ifro.edu.br/media/alunos/150x200/96227.WLnLQO41nuG-.jpg",
+        "/img/Corno3Ajpg.jpg",
       featured: true,
     },
     {
