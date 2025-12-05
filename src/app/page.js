@@ -10,19 +10,40 @@ import {
   Equal,
   MoveRight,
   Infinity,
+  Atom,
+  Beaker,
+  FlaskConical,
+  FlaskRound,
+  TestTube,
 } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import ModalConvite from "@/components/ModalConvite";
-=======
-import { Atom, FlaskConical, Beaker, Microscope, Heart, Sparkles, GraduationCap, Mail } from 'lucide-react';
->>>>>>> 011b0138cc109885996446b6015e9024fcb05d6e
-
+import ModalZueira from "@/components/ModalZueira";
 export default function Home() {
-  const [openModal, setOpenModal] = useState(false);
+  const [showZueira, setShowZueira] = useState(false);
+  const [showConvite, setShowConvite] = useState(false);
   return (
     <div className={styles.page}>
+      <div className={styles.decoracaoRotativa} style={{top: "10%", left: "20%"}}>
+        <Atom size={120}/>
+      </div>
+      <div className={styles.decoracaoPulsando } style={{top: "50%", right: "10%"}}>
+        <Beaker size={120}/>
+      </div>
+      <div className={styles.decoracaoLevitando } style={{top: "70%", left: "10%"}}>
+        <FlaskConical size={120}/>
+      </div>
+      <div className={styles.decoracaoPulsando } style={{bottom: "-30%", left: "20%"}}>
+        <FlaskRound size={120}/>
+      </div>
+      <div className={styles.decoracaoRotativa } style={{bottom: "-20%", right: "20%"}}>
+        <Microscope size={100}/>
+      </div>
+      <div className={styles.decoracaoLevitando } style={{top: "10%", right: "10%"}}>
+        <TestTube size={120}/>
+      </div>
       <main className={styles.main}>
-        <h1 className={styles.titulo}>Uma Reação Especial</h1>
+        <h1 className={styles.titulo}>Uma Reação Especial 🧪</h1>
         <div className={styles.cardInesquecivel}>
           <h2 className={styles.textoCard}>
             Quando elementos especiais se combinam...
@@ -86,7 +107,9 @@ export default function Home() {
               <div className={styles.containerConteudo}>
                 <div className={styles.conteudo}>
                   <h3 className={styles.tituloCard}>Inspiração</h3>
-                  <p className={styles.paragrafoCard}>Sua paixão pela química contagiou todos nós</p>
+                  <p className={styles.paragrafoCard}>
+                    Sua paixão pela química contagiou todos nós
+                  </p>
                 </div>
                 <div className={styles.containerEquacao}>
                   <p className={styles.equacaoCard}>
@@ -116,14 +139,22 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.containerBotaoZoeira}>
-          <button onClick={() => setShowZueria(!showZueria)} className={styles.botaoZoeria}>
+          <button
+            onClick={() => setShowZueira(!showZueira)}
+            className={styles.botaoZoeria}
+          >
             pH da Gratidão <Equal /> <Infinity />
           </button>
         </div>
         <div className={styles.containerBotaoConvite}>
-          <h2 className={styles.tituloConvite}>E agora, chegou o momento da pergunta mais importante...</h2>
+          <h2 className={styles.tituloConvite}>
+            E agora, chegou o momento da pergunta mais importante...
+          </h2>
           <div>
-            <button onClick={() => setShowConvite(!showConvite)} className={styles.botaoConvite}>
+            <button
+              onClick={() => setShowConvite(!showConvite)}
+              className={styles.botaoConvite}
+            >
               <Mail />
               Abrir convite Especial
               <Sparkles />
@@ -131,7 +162,7 @@ export default function Home() {
           </div>
         </div>
         <ModalConvite show={showConvite} setShow={setShowConvite} />
-        <ModalZueira show={showZueria} setShow={setShowZueria} />
+        <ModalZueira show={showZueira} setShow={setShowZueira} />
       </main>
     </div>
   );

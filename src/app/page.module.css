@@ -1,4 +1,3 @@
-
 .main {
   justify-content: center;
   align-items: center;
@@ -6,6 +5,61 @@
   display: flex;
   flex-direction: column;
   padding: 5% 20%;
+}
+
+.decoracaoRotativa {
+  opacity: 0.125;
+  position: absolute;
+  color: var(--color-font);
+  animation: girar 15s linear infinite; /* ⬅ animação girando */
+}
+
+.decoracaoLevitando {
+  opacity: 0.125;
+  position: absolute;
+  color: var(--color-font);
+  animation: levitar 3.5s ease-in-out infinite;
+}
+
+@keyframes levitar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.decoracaoPulsando {
+  opacity: 0.125;
+  color: var(--color-font);
+  position: absolute;
+  animation: pulsar 2s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animação */
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .titulo {
@@ -79,8 +133,8 @@
 }
 
 .card {
-  min-width: 300px;
-  max-width: 60%;
+  width: calc(50% - 25px); /* metade do espaço */
+  min-width: 350px; /* opcional, evita quebrar feio */
   background-color: var(--background-card);
   height: 200px;
   box-shadow: var(--shadow-card) 0px 7px 29px 0px;
@@ -159,9 +213,9 @@
   flex-direction: row;
 }
 
-.containerBotaoZoeira{
-    margin-top: 40px;
-    margin-bottom: 80px;
+.containerBotaoZoeira {
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .botaoZoeria {
@@ -172,22 +226,22 @@
   border-radius: 15px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
-background-image: linear-gradient(
-  to left,
-  var(--background-bottom),
-  var(--background-bottom-light)
-);
+  background-image: linear-gradient(
+    to left,
+    var(--background-bottom),
+    var(--background-bottom-light)
+  );
   color: var(--color-font-component);
   border: none;
   font-size: 16px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 40px 0px;
 }
 
-
-.tituloConvite{
-    color: var(--color-font);
-    font-size: 20px;
+.tituloConvite {
+  color: var(--color-font);
+  font-size: 20px;
 }
 
 .botaoConvite {
@@ -199,12 +253,13 @@ background-image: linear-gradient(
   border-radius: 15px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
-background-image: linear-gradient(
-  to left,
-  var(--background-bottom),
-  var(--background-bottom-light)
-);
+  background-image: linear-gradient(
+    to left,
+    var(--background-bottom),
+    var(--background-bottom-light)
+  );
   color: var(--color-font-component);
   border: none;
   font-size: 16px;
@@ -212,8 +267,31 @@ background-image: linear-gradient(
   margin: 80px auto;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1700px) {
+  .cardInesquecivel {
+    width: 90%;
+  }
+}
 
+@media (max-width: 1000px) {
+  .main {
+    padding: 5% 10%;
+  }
+}
+
+@media (max-width: 750px) {
+  .cardInesquecivel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 5% 5%;
+  }
+}
+
+@media (max-width: 500px) {
   .main {
     padding: 20px 10px;
   }
@@ -302,11 +380,9 @@ background-image: linear-gradient(
     font-size: 15px;
     margin: 50px auto;
   }
-
 }
 
 @media (max-width: 320px) {
-
   .titulo {
     font-size: 22px;
   }

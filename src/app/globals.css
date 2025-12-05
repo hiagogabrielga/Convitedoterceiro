@@ -109,14 +109,17 @@ body {
 }
 
 :root {
-  --background-body: #e6f8ec;
-  --background-card: #f6faf8;
-  --background-icon: #07c379;
-  --background-bottom: #00c870;
-  --background-span: #c9f1d8;
-  --color-font: #42b373;
-  --color-font-span: #26a75d;
-  --color-font-component: #ffffff;
-  --shadow-card: rgba(0, 0, 0, 0.08);
-  --background-bottom-light: #4bc98e; /* cor manualmente mais clara */
+  --background-body: #E9F7EF; 
+  --background-card: #FFFFFF; 
+  --background-icon: #1DBF73;   
+  --background-bottom: #0FC46A;  
+  --background-bottom-light: #4DE190; 
+  --background-span: #D3F5E1;
+
+  --color-font: #2E7D5A;        
+  --color-font-span: #1F9E59;   
+  --color-font-component: #FFFFFF;
+
+  --shadow-card: rgba(0, 0, 0, 0.10);
 }
+
