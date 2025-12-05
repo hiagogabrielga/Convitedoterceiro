@@ -97,7 +97,7 @@ export default function Home() {
       id: 1,
       name: "João Gabriel Corso",
       avatar:
-        "/img/Corno3Ajpg.jpg",
+        "/img/Corno3A.jpg",
       featured: true,
     },
     {
