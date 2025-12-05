@@ -139,12 +139,11 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.containerBotaoZoeira}>
-          <button
-            onClick={() => setShowZueira(!showZueira)}
+          <div
             className={styles.botaoZoeria}
           >
             pH da Gratidão <Equal /> <Infinity />
-          </button>
+          </div>
         </div>
         <div className={styles.containerBotaoConvite}>
           <h2 className={styles.tituloConvite}>

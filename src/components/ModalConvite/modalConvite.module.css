@@ -1,3 +1,6 @@
+/* ===================== */
+/*    BACKDROP           */
+/* ===================== */
 .backdrop {
   position: fixed;
   inset: 0;
@@ -8,34 +11,194 @@
   z-index: 999;
 }
 
-/* Caixa animada como TV */
+/* ===================== */
+/*    MODAL BOX / TV     */
+/* ===================== */
 .modalBox {
-  background: #111;
-  border: 3px solid #888;
+  background: var(--color-font-component);
   border-radius: 8px;
   overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* Responsivo */
+  width: clamp(260px, 60vw, 800px);
+  padding: clamp(15px, 3vw, 35px);
 }
 
-/* Conteúdo aparece só depois da expansão */
-.content {
-  color: white;
-  font-size: 18px;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Botão de fechar */
+/* ===================== */
+/*    BOTÃO FECHAR       */
+/* ===================== */
 .closeBtn {
   position: absolute;
   top: 10px;
   right: 10px;
+
+  height: clamp(28px, 6vw, 40px);
+  width: clamp(28px, 6vw, 40px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: var(--color-font-component);
   border: none;
-  background: none;
-  color: white;
   cursor: pointer;
-  z-index: 10;
+  transition: 0.2s;
+  font-size: clamp(16px, 4vw, 24px);
+}
+
+.closeBtn:hover {
+  background-color: red;
+  color: white;
+}
+
+/* ===================== */
+/*   EMOJIS CAINDO       */
+/* ===================== */
+.emojiRain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.emoji {
+  position: absolute;
+  top: -10%;
+  font-size: clamp(18px, 4vw, 30px);
+  animation: cair 4s linear infinite;
+  opacity: 0.125;
+}
+
+@keyframes cair {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* POSIÇÕES RANDOMIZADAS (20 emojis) */
+.emoji:nth-child(1) { left: 5%; animation-duration: 4.5s; }
+.emoji:nth-child(2) { left: 15%; animation-duration: 5s; }
+.emoji:nth-child(3) { left: 25%; animation-duration: 4s; }
+.emoji:nth-child(4) { left: 35%; animation-duration: 6s; }
+.emoji:nth-child(5) { left: 45%; animation-duration: 4.8s; }
+.emoji:nth-child(6) { left: 55%; animation-duration: 5.3s; }
+.emoji:nth-child(7) { left: 65%; animation-duration: 4.2s; }
+.emoji:nth-child(8) { left: 75%; animation-duration: 5.7s; }
+.emoji:nth-child(9) { left: 85%; animation-duration: 4.9s; }
+.emoji:nth-child(10) { left: 95%; animation-duration: 6.2s; }
+
+.emoji:nth-child(11) { left: 12%; animation-duration: 5.1s; }
+.emoji:nth-child(12) { left: 28%; animation-duration: 4.3s; }
+.emoji:nth-child(13) { left: 39%; animation-duration: 6.4s; }
+.emoji:nth-child(14) { left: 50%; animation-duration: 4.1s; }
+.emoji:nth-child(15) { left: 61%; animation-duration: 5.6s; }
+.emoji:nth-child(16) { left: 72%; animation-duration: 4.4s; }
+.emoji:nth-child(17) { left: 83%; animation-duration: 6.1s; }
+.emoji:nth-child(18) { left: 18%; animation-duration: 5.4s; }
+.emoji:nth-child(19) { left: 32%; animation-duration: 4.6s; }
+.emoji:nth-child(20) { left: 68%; animation-duration: 5.8s; }
+
+/* ===================== */
+/*        TEXTOS         */
+/* ===================== */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  font-size: clamp(20px, 5vw, 34px);
+  font-weight: bolder;
+  margin-bottom: 20px;
+  color: var(--color-font-span);
+}
+
+.paragrafo {
+  text-align: center;
+  font-size: clamp(14px, 4vw, 20px);
+  color: var(--color-font);
+  margin-bottom: 20px;
+}
+
+/* ===================== */
+/*         CARD          */
+/* ===================== */
+.card {
+  width: 90%;
+  height: clamp(180px, 35vw, 260px);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: clamp(10px, 3vw, 20px);
+
+  box-shadow: var(--background-body) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  background-color: var(--background-body);
+  margin-bottom: 20px;
+  z-index: 1000;
+}
+
+.paragrafoCard {
+  text-align: center;
+  font-size: clamp(20px, 6vw, 35px);
+  color: var(--color-font);
+  margin-bottom: 10px;
+}
+
+.paraninfo {
+  font-size: clamp(28px, 7vw, 45px);
+  font-weight: bolder;
+  color: var(--color-font-span);
+  text-align: center;
+  animation: pulsar 2s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.rodape {
+  font-size: clamp(16px, 5vw, 26px);
+  text-align: center;
+  color: var(--color-font-span);
+  margin-bottom: 20px;
+}
+
+.turmas {
+  font-size: clamp(20px, 6vw, 30px);
+  font-weight: bolder;
+  color: var(--color-font-span);
+}
+
+/* ===================== */
+/*  AJUSTES MOBILE EXTRA */
+/* ===================== */
+@media (max-width: 420px) {
+  .card {
+    height: auto;
+    padding: 20px;
+  }
 }

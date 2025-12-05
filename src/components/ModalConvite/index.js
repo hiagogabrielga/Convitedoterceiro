@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./modalConvite.module.css";
-import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { motion, AnimatePresence  } from "framer-motion";
+import { X,Sparkles, Heart, Award } from "lucide-react";
 export default function ModalConvite({ show, setShow }) {
   return (
     <AnimatePresence>
@@ -29,7 +29,7 @@ export default function ModalConvite({ show, setShow }) {
               },
             }}
             whileInView={{
-              width: "50%", // largura final
+              width: "45%", // largura final
               transition: {
                 delay: 0.3,
                 duration: 0.35,
@@ -43,6 +43,35 @@ export default function ModalConvite({ show, setShow }) {
               transition: { duration: 0.3 },
             }}
           >
+            <div className={styles.emojiRain}>
+              {Array.from({ length: 20 }).map((_, i) => (
+                <span key={i} className={styles.emoji}>
+                  {
+                    [
+                      "🧪",
+                      "⚗️",
+                      "🧫",
+                      "🧬",
+                      "🔬",
+                      "🔥",
+                      "💥",
+                      "⚡",
+                      "💧",
+                      "🌡️",
+                      "💨",
+                      "🧊",
+                      "☁️",
+                      "🌫️",
+                      "⚛️",
+                      "💠",
+                      "🧴",
+                      "💊",
+                      "🍃",
+                    ][Math.floor(Math.random() * 19)]
+                  }
+                </span>
+              ))}
+            </div>
             <button className={styles.closeBtn} onClick={() => setShow(false)}>
               <X size={26} />
             </button>
@@ -53,34 +82,35 @@ export default function ModalConvite({ show, setShow }) {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.55, duration: 0.3 }}
             >
-              <h1>Querido Professor! 🧪</h1>
-              <p>
+              <div className={styles.decoracaoPulsando}><Award size={60} color="#e0d421ff"/><Heart size={60} color="#e21414ff"/><Sparkles size={60} color="#488d20ff"/></div>
+              <h1 className={styles.titulo}>Querido Professor Alan Candido da Silva! 🧪</h1>
+              <p className={styles.paragrafo}>
                 Assim como uma reação exotérmica libera energia e calor, sua
                 presença em nossas vidas liberou conhecimento, inspiração e
                 alegria!
               </p>
-              <p>
+              <p className={styles.paragrafo}>
                 Você foi o catalisador perfeito que acelerou nossa jornada de
                 aprendizado, tornando cada conceito complexo em algo fascinante
                 e compreensível.
               </p>
-              <div>
-                <p>
+              <div className={styles.card}>
+                <p className={styles.paragrafoCard}>
                   Por isso, com muito carinho e gratidão, gostaríamos de fazer
                   um convite especial:
                 </p>
-                <p>Seja nosso Paraninfo! 🎓✨</p>
+                <p className={styles.paraninfo}>Seja nosso Paraninfo! 🎓✨</p>
               </div>
-              <p>
+              <p className={styles.paragrafo}>
                 Queremos que você esteja ao nosso lado neste momento tão
                 importante, representando todos os ensinamentos valiosos e a
                 conexão especial que construímos juntos.
               </p>
-              <h3>
+              <h3 className={styles.rodape}>
                 Sua presença tornará nossa formatura ainda mais especial! 💚
               </h3>
-              <h4>Com todo nosso carinho e admiração,</h4>
-              <h4>3ºA e 3ºB de Informática</h4>
+              <h4 className={styles.paragrafo}>Com todo nosso carinho e admiração,</h4>
+              <h4 className={styles.turmas}>3ºA e 3ºB de Informática</h4>
             </motion.div>
           </motion.div>
         </motion.div>
