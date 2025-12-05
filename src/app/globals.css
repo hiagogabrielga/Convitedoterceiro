@@ -1,42 +1,122 @@
 /* Reset CSS por Eric Meyer */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details,
-embed, figure, figcaption,
-footer, header, hgroup,
-menu, nav, output,
-ruby, section,
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
 summary {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   font-size: 100%;
-   font: inherit;
-   vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 body {
-   line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-   list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 blockquote {
-   quotes: none;
+  quotes: none;
 }
 table {
-   border-collapse: collapse;
-   border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
 
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--background-body);
+  cursor: default;
+}
+
+:root {
+  --background-body: #e6f8ec;
+  --background-card: #f6faf8;
+  --background-icon: #07c379;
+  --background-bottom: #00c870;
+  --background-span: #c9f1d8;
+  --color-font: #42b373;
+  --color-font-span: #26a75d;
+  --color-font-component: #ffffff;
+  --shadow-card: rgba(0, 0, 0, 0.08);
+  --background-bottom-light: #4bc98e; /* cor manualmente mais clara */
 }

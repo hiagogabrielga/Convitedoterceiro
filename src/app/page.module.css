@@ -1,281 +1,356 @@
-.container {
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #f0fdf4, #d1fae5);
+
+.main {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 4rem 1rem;
-  position: relative;
-  overflow: hidden;
+  padding: 5% 20%;
 }
 
-/* Ícones decorativos */
-.icon {
-  position: absolute;
-  font-size: 4rem;
-  opacity: 0.35;
-  user-select: none;
-  color: #a7f3d0;
+.titulo {
+  color: var(--color-font-span);
+  font-size: 30pt;
+  font-weight: bolder;
 }
 
-.iconAtom {
-  top: 20px;
-  left: 20px;
-}
-
-.iconTube {
-  bottom: 60px;
-  left: 25%;
-}
-
-.iconCoat {
-  top: 30%;
-  right: 20px;
-}
-
-.title {
-  font-size: 3.5rem;
-  font-weight: 400;
-  color: #065f46;
+.cardInesquecivel {
+  width: 55%;
+  background-color: var(--background-card);
+  height: 20%;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25%;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-card) 0px 7px 29px 0px;
 }
 
-.emoji {
-  font-size: 3rem;
+.textoCard {
+  font-size: 16pt;
+  color: var(--color-font);
 }
 
-.box {
-  margin-top: 2.5rem;
-  background: white;
-  border: 1px solid #bbf7d0;
-  padding: 2.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  text-align: center;
-  max-width: 650px;
+.equacao {
+  font-size: 14pt;
+  color: var(--color-font);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
 }
 
-.subtitle {
-  color: #047857;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+.resultadoInesquecivel {
+  color: var(--color-font-span);
+  font-weight: bolder;
 }
 
-.formula {
-  font-size: 2rem;
-  font-weight: 400;
-  color: #064e3b;
-}
-
-.symbol {
-  color: #059669;
-}
-
-.text {
-  margin-top: 2rem;
-  max-width: 700px;
-  text-align: center;
-  font-size: 1.2rem;
-  color: #065f46;
-}
-
-/* Título da nova seção */
-.sectionTitle {
-  font-size: 2.4rem;
-  font-weight: 400;
-  color: #065f46;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+.textoSolto {
+  font-size: 16pt;
+  color: var(--color-font);
+  width: 60%;
   text-align: center;
 }
 
-/* Grid dos 4 cards */
-.cardGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem 3rem;
-  max-width: 1100px;
-  width: 100%;
-  margin-top: 1rem;
+.formularProfessor {
+  margin-top: 5%;
 }
 
-/* Card individual */
+.subTitulo {
+  font-size: 24pt;
+  color: var(--color-font-span);
+  font-weight: bolder;
+  text-align: center;
+}
+
+.containerCards {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .card {
-  background: white;
-  border: 1px solid #bbf7d0;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.07);
+  min-width: 300px;
+  max-width: 60%;
+  background-color: var(--background-card);
+  height: 200px;
+  box-shadow: var(--shadow-card) 0px 7px 29px 0px;
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 1.35s ease, box-shadow 0.35s ease;
+  transform-origin: center;
   display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
+  justify-content: space-between;
 }
 
-/* Ícone verde do card */
-.cardIcon {
-  background: #10b981;
-  color: white;
-  font-size: 1.8rem;
-  padding: 1rem;
-  border-radius: 999px;
+.card:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 40px 0px;
+}
+
+.containerIcon {
+  background-color: var(--background-icon);
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-}
-
-/* Título do card */
-.cardTitle {
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #064e3b;
-}
-
-/* Texto do card */
-.cardText {
-  margin-top: 0.3rem;
-  margin-bottom: 0.8rem;
-  color: #047857;
-  font-size: 1rem;
-  max-width: 350px;
-}
-
-/* Tag química */
-.tag {
-  display: inline-block;
-  background: #d1fae5;
-  color: #065f46;
-  padding: 0.4rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #a7f3d0;
-  font-size: 0.9rem;
-}
-
-/* Tag final “pH da Gratidão = ∞” */
-.footerTag {
-  margin-top: 3rem;
-  background: #10b981;
-  color: white;
-  padding: 0.9rem 2rem;
-  border-radius: 999px;
-  font-size: 1.2rem;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-}
-
-
-
-/* Texto acima do botão */
-.questionText {
-  font-size: 1.6rem;
-  margin-top: 4rem;
-  margin-bottom: 1.5rem;
-  color: #065f46;
-  text-align: center;
-}
-
-/* Botão verde */
-.inviteButton {
-  background: #10b981;
-  color: white;
-  padding: 1rem 2.5rem;
-  border: none;
-  border-radius: 14px;
-  font-size: 1.3rem;
-  display: flex;
   align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.inviteButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+.containerConteudo {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  position: relative;
 }
 
-.iconMail {
-  font-size: 1.5rem;
+.icon {
+  color: var(--color-font-component);
 }
 
-.iconSpark {
-  font-size: 1.5rem;
-}
-
-/* MODAL */
-.modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+.conteudo {
   height: 100%;
-  backdrop-filter: blur(4px);
-  background: rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.tituloCard {
+  font-size: 24px;
+  color: var(--color-font-span);
+}
+
+.paragrafoCard {
+  font-size: 16px;
+  margin-top: 20px;
+  color: var(--color-font);
+}
+
+.containerEquacao {
+  background-color: var(--background-body);
+  width: fit-content;
+  right: 0;
+  display: flex;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--color-font);
+  border: 2px solid;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.equacaoCard {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 0.3s ease forwards;
+  gap: 5px;
+  font-size: 16px;
+  flex-direction: row;
 }
 
-/* Conteúdo do modal */
-.modalContent {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 1.2rem;
-  width: 400px;
-  text-align: center;
-  border: 1px solid #bbf7d0;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-  animation: scaleIn 0.35s ease forwards;
+.containerBotaoZoeira{
+    margin-top: 40px;
+    margin-bottom: 80px;
 }
 
-.modalTitle {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #065f46;
-}
+.botaoZoeria {
+  height: 40px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
 
-.modalText {
-  font-size: 1.1rem;
-  color: #047857;
-  margin-bottom: 1.5rem;
-}
-
-/* Botão fechar */
-.closeButton {
-  background: #10b981;
-  color: white;
-  padding: 0.7rem 1.5rem;
+background-image: linear-gradient(
+  to left,
+  var(--background-bottom),
+  var(--background-bottom-light)
+);
+  color: var(--color-font-component);
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: opacity 0.2s;
-}
-
-.closeButton:hover {
-  opacity: 0.8;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 40px 0px;
 }
 
 
-.infinito{
-  font-size: 26px;
+.tituloConvite{
+    color: var(--color-font);
+    font-size: 20px;
 }
 
-/* ANIMAÇÕES */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.botaoConvite {
+  height: 60px;
+  width: 260px;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+
+background-image: linear-gradient(
+  to left,
+  var(--background-bottom),
+  var(--background-bottom-light)
+);
+  color: var(--color-font-component);
+  border: none;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 40px 0px;
+  margin: 80px auto;
 }
 
-@keyframes scaleIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
+@media (max-width: 500px) {
+
+  .main {
+    padding: 20px 10px;
   }
-  to {
-    transform: scale(1);
-    opacity: 1;
+
+  .titulo {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .textoSolto {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .cardInesquecivel {
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .textoCard {
+    font-size: 15px;
+  }
+
+  .equacao {
+    font-size: 14px;
+  }
+
+  /* Container vira coluna */
+  .containerCards {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Card vira coluna */
+  .card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .containerIcon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .containerConteudo {
+    width: 100%;
+    position: static;
+  }
+
+  .tituloCard {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .paragrafoCard {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Equação fica abaixo e centralizada */
+  .containerEquacao {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .equacaoCard {
+    font-size: 14px;
+  }
+
+  /* Botões */
+  .botaoZoeria {
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .botaoConvite {
+    width: 230px;
+    height: 55px;
+    font-size: 15px;
+    margin: 50px auto;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .titulo {
+    font-size: 22px;
+  }
+
+  .subTitulo {
+    font-size: 18px;
+  }
+
+  .textoSolto {
+    font-size: 13px;
+  }
+
+  .cardInesquecivel {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .textoCard {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .tituloCard {
+    font-size: 18px;
+  }
+
+  .paragrafoCard {
+    font-size: 13px;
+  }
+
+  .equacaoCard {
+    font-size: 13px;
+  }
+
+  .botaoZoeria {
+    width: 160px;
+    font-size: 14px;
+  }
+
+  .botaoConvite {
+    width: 200px;
+    font-size: 14px;
   }
 }

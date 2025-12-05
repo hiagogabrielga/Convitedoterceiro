@@ -1,8 +1,9 @@
-import Image from "next/image";
-import styles from "./modalConvite.module.css";
+"use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-export default function ModalConvite({ show, setShow }) {
+import styles from "./modalZueira.module.css";
+
+export default function ModalZueira({ show, setShow }) {
   return (
     <AnimatePresence>
       {show && (
@@ -18,18 +19,18 @@ export default function ModalConvite({ show, setShow }) {
             className={styles.modalBox}
             onClick={(e) => e.stopPropagation()}
             initial={{
-              width: "0",
-              height: "0",
+              width: "2px",
+              height: "0px",
             }}
             animate={{
-              height: "90%", // altura do modal
+              height: "300px", // altura do modal
               transition: {
                 duration: 0.3,
                 ease: "easeOut",
               },
             }}
             whileInView={{
-              width: "50%", // largura final
+              width: "420px", // largura final
               transition: {
                 delay: 0.3,
                 duration: 0.35,
@@ -53,34 +54,7 @@ export default function ModalConvite({ show, setShow }) {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.55, duration: 0.3 }}
             >
-              <h1>Querido Professor! 🧪</h1>
-              <p>
-                Assim como uma reação exotérmica libera energia e calor, sua
-                presença em nossas vidas liberou conhecimento, inspiração e
-                alegria!
-              </p>
-              <p>
-                Você foi o catalisador perfeito que acelerou nossa jornada de
-                aprendizado, tornando cada conceito complexo em algo fascinante
-                e compreensível.
-              </p>
-              <div>
-                <p>
-                  Por isso, com muito carinho e gratidão, gostaríamos de fazer
-                  um convite especial:
-                </p>
-                <p>Seja nosso Paraninfo! 🎓✨</p>
-              </div>
-              <p>
-                Queremos que você esteja ao nosso lado neste momento tão
-                importante, representando todos os ensinamentos valiosos e a
-                conexão especial que construímos juntos.
-              </p>
-              <h3>
-                Sua presença tornará nossa formatura ainda mais especial! 💚
-              </h3>
-              <h4>Com todo nosso carinho e admiração,</h4>
-              <h4>3ºA e 3ºB de Informática</h4>
+              Aqui vem o modal da foto maravilhosa do Alan do ENEM
             </motion.div>
           </motion.div>
         </motion.div>
