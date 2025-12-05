@@ -249,7 +249,7 @@ export default function Home() {
     {
       id: 1,
       name: "Ana Clara Rodrigues Nunes",
-      avatar: "/img/anaclara3B.jpg",
+      avatar: "/img/AnaClara3B.jpg",
       featured: true,
     },
     {
